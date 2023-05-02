@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+@each $size-name, $size-value in $font-sizes {
+  .fs-#{$size-name} {
+    font-size: $size-value;
+    @if $size-name > 600 {
+      line-height: 1.2;
+    }
+  }
+}
+
+// :root {
+//   @each $screen-size, $sizes in $font-sizes {
+//     @if $screen-size == sm {
+//       @each $size, $value in $sizes {
+//         --fs-#{$size}: #{$value};
+//         .fs-#{$size} {
+//           font-size: #{$value};
+//           @if $size > 600 {
+//             line-height: 1.2;
+//           }
+//         }  
+//       }
+//     } @else if $screen-size == md {
+//       @include mq(medium) {
+//         @each $size, $value in $sizes {
+//           --fs-#{$size}: #{$value};
+//           .fs-#{$size} {
+//             font-size: #{$value};
+//             @if $size > 600 {
+//               line-height: 1.2;
+//             }
+//           }
+//         }
+//       } 
+//     } @else if $screen-size == lg {
+//       @include mq(large) {
+//         @each $size, $value in $sizes {
+//           --fs-#{$size}: #{$value};
+//           .fs-#{$size} {
+//             font-size: #{$value};
+//             @if $size > 600 {
+//               line-height: 1.2;
+//             }
+//           }
+//         }
+//       } 
+//     }
+//   }
+// }
