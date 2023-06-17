@@ -14,3 +14,24 @@ body {
   line-height: 1.5;
   color: clr(neutral, 400);
 }
+
+::-webkit-scrollbar {
+  width: size(8);
+  background-color: clr(neutral, 200);
+}
+
+::-webkit-scrollbar-track {
+  margin-block: size(8);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: clr(primary, 400);
+  border-radius: 100vw;
+}
+
+@supports (scrollbar-color: clr(primary, 400) clr(neutral, 200)) {
+  * {
+    scrollbar-color: clr(primary, 400) clr(neutral, 200);
+    scrollbar-width: thin;
+  }
+}
