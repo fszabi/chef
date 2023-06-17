@@ -9,6 +9,8 @@
     margin-block-end: size(36) * 1.5;
   }
 
+  margin-block-end: size(36) * 1.5;
+
   &[data-decoration="true"]::after {
     content: "";
     display: block;
