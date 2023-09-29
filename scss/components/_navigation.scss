@@ -8,17 +8,23 @@
   }
 
   a {
+    // text-decoration: underline 0.1em transparent;
     text-decoration: underline 0.1em transparent;
+    text-underline-offset: 0.2em;
     color: clr(neutral, 100);
     font: {
       family: $ff-cursive;
       size: fs(600);
     }
-    transition: opacity 250ms, text-decoration 250ms;
+    // transition: opacity 250ms, text-decoration 250ms;
+    transition: opacity 250ms, text-decoration-color 300ms,
+      text-underline-offset 300ms;
 
     &:is(:hover, :focus) {
       opacity: 0.7;
+      // text-decoration-color: currentColor;
       text-decoration-color: currentColor;
+      text-underline-offset: 0.3em;
     }
   }
 }
